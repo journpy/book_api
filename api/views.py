@@ -21,28 +21,6 @@ class BookDetailUpdateDeleteView(generics.RetrieveUpdateDestroyAPIView):
     lookup_field = 'id'
 
 
-# class BookCreateView(generics.CreateAPIView):
-#     """View for creating a book object."""
-#     permission_classes = [permissions.IsAdminUser,]
-#     queryset = Book.objects.all()
-#     serializer_class = BookSerializer
-
-
-# class BookUpdateView(generics.RetrieveUpdateAPIView):
-#     """View to update a book instance."""
-#     permission_classes = [permissions.IsAdminUser,]
-#     queryset = Book.objects.all()
-#     serializer_class = BookSerializer
-#     lookup_field = 'id'
-
-
-# class BookDeleteView(generics.RetrieveDestroyAPIView):
-#     """View to delete a Book object."""
-#     permission_classes = [permissions.IsAdminUser,]
-#     queryset = Book.objects.all()
-#     serializer_class = BookSerializer
-
-
 class UsersListCreateView(generics.ListCreateAPIView):
     """List and Create users"""
     permission_classes = [permissions.IsAdminUser,]
