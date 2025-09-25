@@ -1,9 +1,15 @@
-from rest_framework import generics, permissions     # refactored
+from rest_framework import generics, permissions     
 from django.contrib.auth.models import User
-from books.models import Book
-from .serializers import BookSerializer, UserSerializer
+from books.models import Book, Author
+from .serializers import BookSerializer, UserSerializer, AuthorSerializer
 
 
+class AuthorListCreateView(generics.ListCreateAPIView):
+    """Author List Create API View"""
+    queryset = Author.objects.all()
+    serializer_class = AuthorSerializer
+    page_size = 3
+    
 
 class BookListCreateView(generics.ListCreateAPIView):
     """Book List Create API View."""
