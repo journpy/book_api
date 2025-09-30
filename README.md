@@ -11,9 +11,9 @@ git clone https://github.com/journpy/book_api.git
 `python manage.py migrate`
 
 4. See Endpoints on swagger
-localhost:8000/api/schema/swagger-ui/
+http://localhost:8000/api/schema/swagger-ui/
 
 5. Schema and Documentation
-localhost:8000/api/schema/
-localhost:8000/api/schema/redoc/
+http://localhost:8000/api/schema/
+http://localhost:8000/api/schema/redoc/
 
