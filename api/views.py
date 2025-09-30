@@ -6,7 +6,7 @@ from .serializers import BookSerializer, UserSerializer, AuthorSerializer
 
 class AuthorListCreateView(generics.ListCreateAPIView):
     """Author List Create API View"""
-    queryset = Author.objects.all()
+    queryset = Author.objects.prefetch_related('books')
     serializer_class = AuthorSerializer
     page_size = 3
     
@@ -14,7 +14,7 @@ class AuthorListCreateView(generics.ListCreateAPIView):
 class BookListCreateView(generics.ListCreateAPIView):
     """Book List Create API View."""
     permission_classes = [permissions.AllowAny,]
-    queryset = Book.objects.all()
+    queryset = Book.objects.select_related('author')
     serializer_class = BookSerializer
     page_size = 3
 

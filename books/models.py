@@ -22,6 +22,6 @@ class Book(models.Model):
 	isbn = models.CharField(max_length=13)
 	
 	def __str__(self):
-		return self.title
+		return f'Title: {self.title} Subtitle: {self.subtitle}'
 
 
